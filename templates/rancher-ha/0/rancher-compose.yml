@@ -1,0 +1,12 @@
+.catalog:
+  name: Rancher Server HA
+  version: v0.1.0
+  description: Use a meta-rancher to deploy rancher in HA mode with a Rancher LB in front of it. Database is NOT HA.
+  questions:
+  - variable: PUBLIC_PORT
+    label: Public Port
+    description: The host port on which the load balancer will be exposed
+    required: true
+    default: 80
+    type: int
+

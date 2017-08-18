@@ -1,0 +1,7 @@
+name: Rancher Server HA
+description: |
+  Use a meta-rancher to deploy rancher in HA mode with a Rancher LB in front of it. Database is NOT ha.
+version: v0.1.0
+category: System
+labels:
+  io.rancher.orchestration.supported: 'cattle'
