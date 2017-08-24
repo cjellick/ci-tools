@@ -5,6 +5,8 @@ services:
   rancher:            
     image: rancher/server:v1.6.7
     scale: 3
+    links:
+      - mysql:mysql
     command:
       - --advertise-address
       - eth0
