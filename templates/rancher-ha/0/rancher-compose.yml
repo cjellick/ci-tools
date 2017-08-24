@@ -7,6 +7,21 @@
     label: Public Port
     description: The host port on which the load balancer will be exposed
     required: true
-    default: 80
     type: int
+    default: 80
+  - variable: LB_SCALE
+    label: Load Balancer Scale
+    required: true
+    type: int
+    default: 1
+  - variable: RANCHER_IMAGE_REPO
+    label: Rancher Image
+    required: true
+    type: string
+    default: rancher/server
+  - variable: RANCHER_IMAGE_TAG
+    label: Rancher Image Tag
+    required: true
+    type: string
+    default: latest
 

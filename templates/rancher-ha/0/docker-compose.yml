@@ -3,8 +3,10 @@ volumes:
   mysql_data: {}
 services:
   rancher:            
-    image: rancher/server:v1.6.7
+    image: ${RANCHER_IMAGE_REPO}:${RANCHER_IMAGE_TAG}
     scale: 3
+    labels:
+      io.rancher.container.pull_image: always
     links:
       - mysql:mysql
     command:
@@ -17,7 +19,7 @@ services:
     labels:
       io.rancher.container.agent.role: environmentAdmin
       io.rancher.container.create_agent: 'true'
-    scale: 1
+    scale: ${LB_SCALE}
     start_on_create: true
     lb_config:
       port_rules:
