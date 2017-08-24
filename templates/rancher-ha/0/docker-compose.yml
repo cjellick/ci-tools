@@ -5,6 +5,8 @@ services:
   rancher:            
     image: rancher/server:v1.6.7
     scale: 3
+    command:
+      - --advertise-address eth0
   rancher-lb:
     image: rancher/lb-service-haproxy:v0.7.6
     ports:
