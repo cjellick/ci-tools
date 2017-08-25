@@ -9,8 +9,9 @@
     required: true
     type: int
     default: 80
-  - variable: LB_SCALE
-    label: Load Balancer Scale
+  - variable: SCALE
+    label: Scale
+    description: The number of rancher/servers loadbalancer pairs you want
     required: true
     type: int
     default: 1
